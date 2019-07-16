@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    <title>Sequía Chile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/highlight.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+
+    <!-- CSS Requerido por Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
+    <!-- CSS para dar tamaño al mapa -->
+    <style>
+        #myMap{
+            height: 600px;
+        }
+    </style>
+  
+  </head>
+  <body style="background-color:wheat">
+
+
+    <!-- Contenidos de mi Página-->
+<div class="container">
+<h1 style="color:rgb(0, 0, 0)"> Sequía Chile</h1>
+<br/>
+</div>
+
+
+<!-- Contenidos de mi Página-->
+<!--  1.-Explicación (agregando texto y link de apoyo)-->
+    <hr style="color: black"/>
+    <div class="container">
+    <h3 style="color:rgb(0, 0, 0)"> Concepto </h3>
+    <br/>
+    <p style="text-align:justify"> La sequía es un peligro de la naturaleza. No podemos verlo encenderse, como un incendio, o predecir dónde es probable que toque tierra, como lo hacemos en un tornado. Sin embargo, al igual que sus primos de peligro natural, la sequía puede dejar un rastro de destrucción que incluso puede incluir la pérdida de vidas.</p>
+
+    <p style="text-align:justify">Y aunque podríamos referirnos al crepitar de un incendio o al rugido de un tornado, un peligro de sequía no anuncia su llegada. De hecho, los que están familiarizados con la sequía lo llaman un "fenómeno escalofriante", porque lo que puede parecer en primer lugar simplemente un hechizo seco solo se puede discernir en retrospectiva como los primeros días de una sequía.</p>   
+
+    <p style="text-align:justify">La reputación sigilosa de la sequía también se basa en la forma en que sus efectos varían de una región a otra. Una semana sin lluvia podría considerarse una sequía en un clima tropical como Bali, mientras que una brecha de solo siete días entre las lluvias podría ser inusual en Libia, un área desértica donde la precipitación anual es de menos de siete pulgadas (180 milímetros). ¡La sequía puede incluso coexistir con lluvias récord !</p>
+
+    <p style="text-align:justify">En el sentido más general, la sequía se define como una deficiencia de precipitación durante un período prolongado de tiempo (generalmente una temporada o más), lo que resulta en una escasez de agua. Los efectos de esta deficiencia a menudo se llaman impactos de sequía  . Los impactos naturales de la sequía pueden empeorar aún más por la demanda que los humanos ponen en el suministro de agua. </p>
+
+    <a style="text-align:justify" href="https://drought.unl.edu/Education/DroughtBasics.aspx"> Fuente Oficial "National Drought Mitigation Center"</a> 
+    </div>
+
+<!--  2.-Imágenes para ejemplificar la Sequia (utilicé un Carrusel para optimizar espacio-->
+    <hr style="color: black"/>
+    <div class="container">
+        <h3 style="color:rgb(0, 0, 0)"> Fotos </h3>
+        <div>
+         <div>
+            <p style="text-align:justify"> En las siguientes fotografias, se puede observar las consecuencias visibles de la sequía, tanto en la zona central como en la zona sur de Chile. A continuación, se presentan algunas áreas donde el Estado a decretado "Zona de Emergencia Agrícola por Deficit Hídrico o Sequía.</p>
+        </div>
+            <!--Carousel Wrapper-->
+        <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="view">
+          <img class="d-block w-100"
+          style="-webkit-user-select: none;cursor: zoom-in;" src="https://www.24horas.cl/incoming/sequia--en-petorcajpg-2672626/ALTERNATES/w940/SEQUIA%20%20EN%20PETORCA.jpg"
+          alt="First slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <div class="carousel-caption">
+          <h5 class="p-3 mb-2 bg-warning text-dark" class="h3-responsive" style="color: black">Sequía en Petorca, Región de Valparaíso
+        <a href="https://www.24horas.cl/regiones/valparaiso/sequia-en-petorca-el-drama-de-vivir-sin-agua--2672623"> Revisa esta noticia</a>
+        
+          <p>2013</p></h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" style="-webkit-user-select: none;cursor: zoom-in;" src="http://elagro.radioagricultura.cl/wp-content/uploads/2015/05/sequia.jpg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <div class="carousel-caption">
+          <h5 class="p-3 mb-2 bg-warning text-dark" class="h3-responsive" style="color: black" >Sequía en Talca, Región del Maule
+            <a href="http://elagro.radioagricultura.cl/2015/07/29/muerte-de-animales-por-la-sequia-preocupa-a-autoridades-del-maule/">Revisa esta noticia</a>
+          
+          <p>2015</p></h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" style="-webkit-user-select: none;cursor: zoom-in;" src="https://www.cooperativa.cl/noticias/site/artic/20150316/imag/foto_0000000120150316131243.jpg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <div class="carousel-caption">
+          <h5 class="p-3 mb-2 bg-warning text-dark" class="h3-responsive" style="color: black">Sequía en Temuco, Región de la Araucanía
+           <a href="https://www.cooperativa.cl/noticias/pais/region-de-la-araucania/indap-manifesto-preocupacion-por-sequia-en-la-araucania/2015-03-16/131243.html">Revisa esta noticia</a>
+           <p>2015</p></h5>
+        </div>
+      </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+        </div>
+  <!--/.Carousel Wrapper-->
+        </div>
+    </div>
+
+
+
+<!-- 3 Estadistica (Lectura de Archivo Csv (previa preparación
+    Los datos los Descargué de Datos.gob.cl pero me dí cuenta que eran mas de 230 datos,
+    asi que los procesé a partir de su Región. Con ello, logré homologar una tabla para mi Gráfico-->
+<hr style="color: black"/>
+<div class="container">
+    <h3 style="color:rgb(0, 0, 0)"> Sección Gráfica </h1/3>
+      <br/>
+      <div>
+          <p style="text-align:justify"> A continuación de muestra un gráfico estadistico de la cantidad de Emergencias Agricolas declaradas durante el año 2008 hasta el año 2010, estos datos se obtuvieron de <a href="">https://datos.gob.cl/dataset/5237 </a> y guardan relación con "Emergencias Agrícolas y gestión de riesgo agroclimático" Ministerio de Agricultura - Chile.</p>
+      </div> 
+      <div class="content-demo">
+        <div class="container">
+          <div class="intro">
+              <h5 class="text-center"> Gráfico de Emergencias Agrícolas en Chile</h5>
+          </div>
+          <br/>
+          <div class="intro">
+              <canvas id="myChart" width="400" height="200"></canvas>
+          </div>
+        </div>
+        </div>
+</div>
+
+
+<!-- 4 Mapas 
+    El objetivo de esta sección es mostrar los mismos datos del gráfico, pero desde una forma
+    geoespacial. Para ello, se utilizó un mapa.js que llama una librería leaflet, y le indiqué
+    que hiciera unos circulos para las regiones con Emergencias Agricolas por Sequía-->
+<hr style="color: black"/>
+<div class="container">
+    <h3 style="color:rgb(0, 0, 0)"> Mapa </h3>
+
+    <div class="content-demo">
+      <div>
+          <p style="text-align:justify"> En el Siguiente apartado, es posible revisar espacialmente la cantidad de declaraciones de Emergencias agrícolas por Sequía entre el año 2008 al 2010. El concepto de Emergencia Agrícola significa en términos prácticos, que el Ministerio de Agricultura puede disponer de mayor flexibilidad para adoptar medidas para administrar los fondos disponibles, generando partidas especiales, y reasignando fondos para combatir los efectos del evento climático. En este sentido, aquí es posible identificar que regiones ha tenido una mayor cantidad de emergencias, que indican un peor escenario de deficit hídrico, pero una activa reacción del Estado.</p>
+      <br/>
+
+        </div>
+        <div class="intro">
+          <h5 class="text-center"> Mapa de Emergencias Agrícolas en Chile</h5>
+        </div>
+        <div id='myMap'></div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Script para mi Gráfico, sacado de CHART.JS -->    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <script src="grafica.js"></script>
+
+
+    <!-- JS Requerido por Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <!-- Script de prueba -->
+    <script src="mapita1.js"></script>
+
+
+  </body>
+</html>
